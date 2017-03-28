@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template, flash
 from flask_sqlalchemy import SQLAlchemy
 
-from cinema.config import config
+import config
 
 app = Flask(__name__)
 app.config.from_object(config)
@@ -10,7 +10,7 @@ app.config.from_object(config)
 db = SQLAlchemy(app)
 
 if __name__ == '__main__':
-    from cinema.models import *
+    from models import *
     db.create_all()
 
     app.run()

@@ -1,3 +1,6 @@
+__author__ = 'bondarev'
+
+
 DEBUG = True
 SECRET_KEY = 'asdfsdfssf asf dsgsdg'
 
