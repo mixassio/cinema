@@ -55,6 +55,7 @@ class Country(db.Model):
     __tablename__ = 'country'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     title = db.Column(db.String(255), nullable=False)
+    cinemas = db.relationship('Cinema', backref='country', lazy='dynamic')
     
     def __init__(self, title):
         self.title = title
