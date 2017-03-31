@@ -51,7 +51,13 @@
     l = text.split('\r\n')
     #print(l,'это l')
     for i in l:
-        new_cinema = Cinema(i.split(';')[2].strip(), i.split(';')[1].strip(), i.split(';')[3].strip(), i.split(';')[6].strip(), i.split(';')[5].strip())
+        new_cinema = Cinema(
+            i.split(';')[2].strip(), #title
+            i.split(';')[1].strip(), #genre
+            i.split(';')[3].strip(), #year
+            i.split(';')[6].strip(), #director
+            i.split(';')[5].strip()  #country
+        )
         #print(i.split(';'), 'это i.split', i.split(';')[2], '___', new_cinema.id, new_cinema.title)
         db.session.add(new_cinema)   
     for instance in db.session.query(Cinema): 

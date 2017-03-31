@@ -12,6 +12,7 @@ app.config.from_object(config)
 db = SQLAlchemy(app)
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     from models import *
     db.create_all()
     """ simple qwery to table with where
@@ -34,6 +35,10 @@ if __name__ == '__main__':
 4. 
 """
     
+=======
+    app.run()
+
+>>>>>>> 08ac2bd3bdda1318522718fecfef7e5434ff4892
 
         
     
